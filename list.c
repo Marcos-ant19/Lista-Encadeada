@@ -110,6 +110,7 @@ void mostrar(List* l){
         printf("%c ", aux->dados);
         aux = aux->prox;
     }
+    printf("\n");
 }
 
 void size(List* l){
@@ -139,5 +140,18 @@ void clear(List* l){
 }
 
 void ordenar(List* l){
-    
+    No* aux = l->inicio;
+    int temp;
+
+    if(isEmpty(l)){
+        return;
+    }
+    while(aux != NULL && aux->prox != NULL){
+        if(aux->dados > aux->prox->dados){
+            temp = aux->dados;
+            aux->dados = aux->prox->dados;
+            aux->prox->dados = temp;
+        }
+             aux = aux->prox;
+    }
 }

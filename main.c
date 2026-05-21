@@ -4,7 +4,11 @@
 
 int main()
 {
+    //List* l = criar_list();
     List* l = criar_list();
+
+    inserirPos(l, 10, 0);
+
     //int i = 0;
     //int pos;
 
@@ -14,7 +18,8 @@ int main()
     inserirPos(l, 'c', 3);
     inserirPos(l, 'o', 4);
 
-      clear(l);
+      //ordenar(l);
+      //clear(l);
       mostrar(l);
 
     //size(l);
@@ -30,6 +35,5 @@ int main()
 
     }while(!isEmpty(l));
     */
-
     return 0;
 }
